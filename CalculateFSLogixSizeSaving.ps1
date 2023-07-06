@@ -72,11 +72,11 @@ foreach ($UserProfile in $UserProfiles) {
 
   $LocalProfileSizeRoundUp = "{0:N2} MB" -f ($LocalProfileSize.Sum / 1MB)
   $FSLogixDiskSizeRoundUp = "{0:N2} MB" -f ($FSLogixDiskSize / 1MB)
-  Write-Host "$($SAM) Profile Size`t $($LocalProfileSizeRoundUp)"
-  Write-Host "$($SAM) VHDX Size`t $($FSLogixDiskSizeRoundUp)"
+  Write-Host "$($SAM) Profile Size`t`t $($LocalProfileSizeRoundUp)"
+  Write-Host "$($SAM) VHDX Size`t`t $($FSLogixDiskSizeRoundUp)"
   $SavingRatio = ($LocalProfileSize.Sum - $FSLogixDiskSize) / $LocalProfileSize.Sum * 100
   $SavingRoundUp = "{0:N2}%" -f ($SavingRatio)
-  Write-Host "Size Saving Percentage`t $($SavingRoundUp)"
+  Write-Host "Size Saving Percentage`t`t $($SavingRoundUp)"
   Write-Host
 
   Write-Host "Removing virtual disk..." -ForegroundColor Green
