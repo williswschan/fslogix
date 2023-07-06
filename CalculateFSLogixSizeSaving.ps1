@@ -75,7 +75,7 @@ foreach ($UserProfile in $UserProfiles) {
   Write-Host "$($SAM) Profile Size`t $($LocalProfileSizeRoundUp)"
   Write-Host "$($SAM) VHDX Size`t`t $($FSLogixDiskSizeRoundUp)"
   $SavingRatio = ($LocalProfileSize.Sum - $FSLogixDiskSize) / $LocalProfileSize.Sum * 100
-  $SavingRoundUp = "{0:N2}%" -f ($SavingRatio)
+  $SavingRoundUp = "{0:N2} %" -f ($SavingRatio)
   Write-Host "Size Saving Percentage`t`t $($SavingRoundUp)"
   Write-Host
 
